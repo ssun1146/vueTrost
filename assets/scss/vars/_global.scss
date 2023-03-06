@@ -1,0 +1,58 @@
+/* common/_variables.scss */
+// @charset "utf-8";
+
+/* ================== Background ================== */
+
+$bg_default: #fff;
+$bg_main: #111;
+$bg_disable: #b1b0af;
+$bg_disable_btn: #c5c5c5;
+$bg_input: #f8f8f8;
+$bg_main_light: #ffefea;
+$bg_addr: #f2f6fb;
+
+/* ================== Border ================== */
+$border_bold: #f3f3f3;
+$border_slim: #dfdfdf;
+$border_line: #efefef;
+$border_input: #f2f2f2;
+$border_main_light: #fde1d8;
+$border_male: #c8d3f9;
+$border_female: #fbc2ce;
+$border_addr: #d9e6f3;
+
+/* ================== Typo ================== */
+$typo_brand: #ff5477;
+$typo_male: #5d7ee8;
+$typo_female: #ff4472;
+$typo_addr: #769fc8;
+$typo_cash: #ff5e00;
+
+$typo_main: #111;
+$typo_sub: #505050;
+$typo_sub2: #b1b0af;
+$typo_white: #fff;
+
+/* ================== Button ================== */
+$btn_main: linear-gradient(to right, #ff6e5a, #ff3057);
+$btn_main_onetone: #ff4d58;
+$btn_qtalk: linear-gradient(to right, #ef5bff, #7d57ff);
+$btn_qtalk_request: linear-gradient(to right, #28c9d5, #229af6);
+$btn_qmeet: linear-gradient(to right, #1ce99f 0%, #00cbbf 80%);
+$btn_disable: #c5c5c5;
+$btn_disable02: #f2f2f2;
+
+/* ================== Img 경로정리(폴더추가, 변경 시 업뎃) ================== */
+/* 사용예시 : background:url($img_badge + "badge_new.png") no-repeat center; */
+$img_badge: 'https://image.club5678.com/imgs/mobile/main_renewal/badge/';
+$img_bg: 'https://image.club5678.com/imgs/mobile/main_renewal/bg/';
+$img_bnr: 'https://image.club5678.com/imgs/mobile/main_renewal/bnr/';
+$img_btn: 'https://image.club5678.com/imgs/mobile/main_renewal/btn/';
+$img_ico: 'https://image.club5678.com/imgs/mobile/main_renewal/ico/';
+$img_default: 'https://image.club5678.com/imgs/mobile/main_renewal/img/';
+$img_logo: 'https://image.club5678.com/imgs/mobile/main_renewal/logo/';
+$img_txt: 'https://image.club5678.com/imgs/mobile/main_renewal/txt/';
+
+$img_items: 'http://photo.club5678.com/club_lottie/items/';
+// http://photo.club5678.com/club_lottie/items/C02/008/C02008_Slot.png
+// $img_evnt:"https://image.club5678.com/imgs/mobile/main_renewal/evnt/";

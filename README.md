@@ -1,4 +1,4 @@
-# Study
+# Git Trost Clone 
 
 ## Build Setup
 

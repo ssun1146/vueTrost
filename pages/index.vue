@@ -1,9 +1,21 @@
 <template>
-  <Tutorial/>
+  <Trost/>
 </template>
 
 <script>
+import Trost from '~/components/templates/trost.vue';
+
 export default {
-  name: 'IndexPage'
+  layout:'default',
+  name:'indexPage',
+  components:{Trost},
+  props:{},
+  data(){
+      return{
+      }
+  },
+  methods:{
+  }
+
 }
 </script>
