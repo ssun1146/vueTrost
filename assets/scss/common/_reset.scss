@@ -9,12 +9,12 @@ header, article, footer { background: #fff; }
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
 audio, canvas, progress, video { display: inline-block; vertical-align: baseline; }
 audio, canvas, video { display: inline; *zoom: 1; }
-a { display: block; color: #303030; text-decoration: none; cursor: pointer; }
+a { display: block; color: $text_primary; text-decoration: none; cursor: pointer; }
 em, i, address { font-weight: 400; font-style: normal; }
 dl, ul, ol, li, menu { list-style: none; }
 blockquote, q { quotes: none; }
 blockquote:before, blockquote:after, q:before, q:after { content: ''; }
-h1, h2, h3, h4, h5, h6 { font-size: 14px; font-weight: 400; color: $typo_main; }
+h1, h2, h3, h4, h5, h6 { font-size: 14px; font-weight: 400; color: $text_primary; }
 img, fieldset { border: 0 none; }
 button { border: 0 none; }
 legend, caption { display: none; clear: both; }

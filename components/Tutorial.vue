@@ -12,6 +12,6 @@ export default {
 </script>
 <style lang="scss" scoped>
 .test {
-  color: $typo_main;
+  color: $text_primary;
 }
 </style>

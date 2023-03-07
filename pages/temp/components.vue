@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h4 class="component__title">C</h4>
+  <div class="component">
+    <h4 class="component__title">Components</h4>
     <ul class="component__list">
       <li class="component__lst" v-for="(a, i) in menuList" :key="i">
         <nuxt-link :to="a.path">
@@ -20,6 +20,11 @@ export default {
       return{
         menuList:[
           {
+            /** 아이콘 */
+            name: 'icon List ',
+            path: '/temp/icon',
+          },
+          {
             /** 뱃지 */
             name: 'badge List',
             path: '/temp/badge',
@@ -32,12 +37,12 @@ export default {
           {
             /** Header */
             name: 'Header',
-            path: '/temp/Header',
+            path: '/temp/header',
           },
           {
             /** Card */
             name: 'Card',
-            path: '/temp/Card',
+            path: '/temp/card',
           },
           {
             /** footer */
