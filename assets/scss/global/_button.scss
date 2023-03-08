@@ -1,0 +1,79 @@
+.btn {
+  display: block;
+}
+.btn_back{position:absolute; top:0; left:0; width:50px; height:50px; background:iconImg(chevronL) no-repeat center;}
+// button width 옵션
+@for $i from 10 to 300 {
+  .btn__wpx#{$i} {
+    width: 1px * $i;
+    text-align: center
+  };
+  .btn__wper#{$i} {
+    width: 1% * $i;
+    text-align: center
+  };
+}
+
+// button height 옵션
+.btn__s {
+  height: 24px;
+  line-height: 24px;
+  font-size: 12px;
+  font-weight: 400;
+}
+.btn__m {
+  height: 38px;
+  line-height: 38px;
+  font-size: 13px;
+  font-weight: 500;
+}
+.btn__l {
+  height: 46px;
+  line-height: 46px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+// button border 옵션
+.btn__border-common {
+  border: 1px solid $border_default;
+}
+.btn__border-thin {
+  border: 1px solid $border_thin;
+}
+.btn__border-black {
+  border: 1px solid $border_black;
+}
+
+// button shape 옵션
+.btn__square {
+  border-radius: 12px;
+}
+.btn__round {
+  border-radius: 50px;
+}
+
+// button fill 옵션
+.btn__bg-common {
+  background-color: $btn_white;
+  color: $text_tertiary;
+}
+.btn__bg-fill {
+  background-color: $btn_primary;
+  color: $text_white;
+}
+.btn__bg-disabled {
+  background-color: $btn_inactive;
+  color: $text_secondary;
+}
+.btn__bg-point {
+  background-color: $btn_point;
+  color: $text_tertiary;
+}
+
+// button shadow 옵션
+.btn__shadow {
+  box-shadow: 0 0 16px rgba(0,0,0,.16);
+}
+
+

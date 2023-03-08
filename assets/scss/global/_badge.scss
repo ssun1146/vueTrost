@@ -1,0 +1,61 @@
+.badge {
+  &__count {
+    display: inline-block;
+    min-width: 18px;
+    height: 18px;
+    line-height: 18px;
+    padding: 0 6px;
+    border-radius: 10px;
+    background-color: #ff716b;
+    @include font_default(12px, 400, $text_white, 0);
+    text-align: center;
+    box-sizing: border-box;
+  }
+  &__count-black {
+    display: inline-block;
+    min-width: 18px;
+    height: 18px;
+    line-height: 18px;
+    padding: 0 6px;
+    border-radius: 10px;
+    background-color: $btn_primary;
+    @include font_default(12px, 400, $text_white, 0);
+    text-align: center;
+    box-sizing: border-box;
+  }
+  &__zoom {
+    display: inline-block;
+    width: 56px;
+    height: 20px;
+    background: url("@/assets/img/badge_zoom.png") no-repeat center;
+    background-size: auto 100%;
+  }
+  &__type-default {
+    display: inline-block;
+    height: 28px;
+    line-height: 28px;
+    padding: 0 10px;
+    border-radius: 14px;
+    background: $btn_secondary;
+    @include font_default(12px, 400, $text_primary, -.05em);
+  }
+  &__type-point {
+    display: inline-block;
+    height: 28px;
+    line-height: 28px;
+    padding: 0 10px;
+    border-radius: 14px;
+    background: $btn_point;
+    @include font_default(12px, 500, $text_primary, -.05em);
+  }
+  &__check {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("@/assets/img/badge_check.png") no-repeat center;
+    background-size: auto 100%;
+  }
+
+
+
+}

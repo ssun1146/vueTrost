@@ -1,0 +1,50 @@
+.icon {
+  display: block;
+  border:1px solid #c0c0c0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+
+  /* assetType :: asset, bg */
+  // &__asset {
+  //   background-position: center center;
+  //   background-repeat: no-repeat;
+  //   background-size: 100% auto;
+  // }
+
+  /* size Option :: size__s, size__m, size__l */
+  &__s {
+    width: 30px;
+    height: 30px;
+  }
+  &__m {
+    width: 40px;
+    height: 40px;
+  }
+  &__l {
+    width: 48px;
+    height: 48px;
+  }
+
+  /* iconList */
+  &-marketOff{background-image:iconImg(marketOff,aeaeae) }
+  &-marketOn{background-image:iconImg(marketOn,424242)}
+  &-todayOff{background-image:iconImg(todayOff,aeaeae)}
+  &-todayOn{background-image:iconImg(todayOn,424242)}
+  &-homeOff{background-image:iconImg(homeOff,aeaeae)}
+  &-homeOn{background-image:iconImg(homeOn,424242)}
+
+  &-play{background-image:iconImg(play)}
+  &-chevronR{background-image:iconImg(chevronR)}
+  &-chevronL{background-image:iconImg(chevronL)}
+  &-search{background-image:iconImg(search)}
+  &-star{background-image:iconImg(star)}
+  &-refresh{background-image:iconImg(refresh)}
+  &-mappin{background-image:iconImg(mappin)}
+  &-msg{background-image:iconImg(msg)}
+  &-phone{background-image:iconImg(phone)}
+  &-bell{background-image:iconImg(bell)}
+  &-cart{background-image:iconImg(cart)}
+  &-arrow{background-image:iconImg(arrow)}
+  &-heart{background-image:iconImg(heart)}
+}

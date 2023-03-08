@@ -1,0 +1,76 @@
+.header{width:100%; }
+
+.main_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  padding: 0 20px;
+  box-sizing: border-box;
+
+  a {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+  &__logo {
+    width: 72px;
+    height: 30px;
+  }
+  &__box {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  &__btn {
+    display: block;
+    width: 48px;
+    height: 48px;
+    position: relative;
+    &-search {
+      background-image:iconImg(search)
+    }
+    &-setting {
+      background-image:iconImg(setting)
+    }
+    &-alarm {
+      background-image:iconImg(bell)
+    }
+    &-cart {
+      background-image:iconImg(cart)
+    }
+  }
+  &__badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+.sub_header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+
+  &__box-l {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+  }
+
+  &__box-r {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+  }
+}
