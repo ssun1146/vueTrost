@@ -31,18 +31,7 @@
     width: 48px;
     height: 48px;
     position: relative;
-    &-search {
-      background-image:iconImg(search)
-    }
-    &-setting {
-      background-image:iconImg(setting)
-    }
-    &-alarm {
-      background-image:iconImg(bell)
-    }
-    &-cart {
-      background-image:iconImg(cart)
-    }
+
   }
   &__badge {
     position: absolute;
@@ -61,16 +50,46 @@
   text-align: center;
 
   &__box-l {
+    display: flex;
+    align-items: center;
     position: absolute;
     left: 0;
     top: 0;
     height: 100%;
   }
 
+  &__txt {
+    @include font_default(16px, 400, $text_tertiary);
+  }
+
+  &__title {
+    @include font_default(20px, 700, $text_primary);
+  }
+
   &__box-r {
+    display: flex;
+    align-items: center;
     position: absolute;
     right: 0;
     top: 0;
     height: 100%;
+  }
+
+  &__btn {
+    display: block;
+    width: 40px;
+    height: 40px;
+  }
+
+  &__btn-done {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 40px;
+    padding-right: 30px;
+    background: iconImg(check, 9b9b9b) no-repeat right -6px center;
+    @include font_default(16px, 400, $text_neutral);
+
+
   }
 }

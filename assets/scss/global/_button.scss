@@ -77,3 +77,25 @@
 }
 
 
+/* icon Button */
+.btn_ico {
+  display: block;
+  &-prev_w {
+    background-image:iconImg(prev,fff)
+  }
+  &-prev_b {
+    background-image:iconImg(prev)
+  }
+  &-search {
+    background-image:iconImg(search)
+  }
+  &-setting {
+    background-image:iconImg(setting)
+  }
+  &-alarm {
+    background-image:iconImg(bell)
+  }
+  &-cart {
+    background-image:iconImg(cart)
+  }
+}

@@ -41,7 +41,7 @@ export default {
           },
           {
             /** Card */
-            name: 'Card',
+            name: 'Card - ',
             path: '/temp/card',
           },
           {
@@ -51,22 +51,22 @@ export default {
           },
           {
             /** input */
-            name: 'input',
+            name: 'input - ',
             path: '/temp/input',
           },
           {
             /** searchBox */
-            name: 'searchBox',
+            name: 'searchBox - ',
             path: '/temp/searchBox',
           },
           {
             /** chat */
-            name: 'chatBox',
+            name: 'chatBox - ',
             path: '/temp/chatBox',
           },
           {
             /** etc */
-            name: 'etc',
+            name: 'etc - ',
             path: '/temp/etc',
           },
         ]

@@ -16,7 +16,13 @@
 
       <div class="component__group">
         <h4 class="component__txt">Sub Header</h4>
-        <subHeader />
+        <subHeader :header="header03" />
+        <div class="component__space"></div>
+
+        <subHeader :header="header04" />
+        <div class="component__space"></div>
+
+        <subHeader :header="header05" />
         <div class="component__space"></div>
 
       </div>
@@ -39,7 +45,22 @@ export default {
         },
         header02: {
           btn:'search'
-        }
+        },
+        header03: {
+          txt:'부제',
+          title:'가입완료',
+          subBtn: 'done',
+        },
+        header04: {
+          txt:'',
+          title:'가입완료',
+          subBtn: 'cart',
+        },
+        header05: {
+          txt:'부제',
+          title:'가입완료',
+          subBtn: 'search',
+        },
       }
   },
   methods:{

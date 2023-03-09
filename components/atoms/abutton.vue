@@ -21,7 +21,7 @@ export default {
     /** btn Shape 옵션 */
     btnShape: {type:String, default:''},
 
-    /** btn Fill 옵션 */
+    /** btn Fill 옵션 :: common, fill(black), disabled, point */
     btnFill: {type:String, default:''},
 
     /** btn Shadow 옵션 */
