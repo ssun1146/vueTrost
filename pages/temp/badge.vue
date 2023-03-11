@@ -2,24 +2,24 @@
   <div class="component">
     <div class="component__box">
       <div class="component__group">
-        <ABadge :vClass="'badge__count'">
+        <ABadge :vClass="'count'">
           <slot>12</slot>
         </ABadge>
 
-        <ABadge :vClass="'badge__count-black'">
+        <ABadge :vClass="'count-black'">
           <slot>12</slot>
         </ABadge>
 
-        <ABadge :vClass="'badge__zoom'" />
+        <ABadge :vClass="'zoom'" />
 
-        <ABadge :vClass="'badge__type-default'">
+        <ABadge :vClass="'type-default'">
           <slot>성격</slot>
         </ABadge>
-        <ABadge :vClass="'badge__type-point'">
+        <ABadge :vClass="'type-point'">
           <slot>성격</slot>
         </ABadge>
 
-        <ABadge :vClass="'badge__check'" />
+        <ABadge :vClass="'check'" />
       </div>
     </div>
   </div>

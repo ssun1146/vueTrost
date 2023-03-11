@@ -41,7 +41,7 @@ export default {
           },
           {
             /** Card */
-            name: 'Card - ',
+            name: 'Card',
             path: '/temp/card',
           },
           {

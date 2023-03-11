@@ -1,5 +1,5 @@
 <template>
-  <div :class="vClass">
+  <div :class="'badge badge__' + vClass">
     <slot></slot>
   </div>
 </template>
@@ -10,7 +10,7 @@ export default {
     components:{},
     props:{
       /** vclass
-       * count, count-black, zoom, type_default, type-point, check
+       * count, count-black, zoom, type-default, type-point, check
        */
       vClass: {type:String, default:''}
     },

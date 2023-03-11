@@ -1,0 +1,87 @@
+/* ========= text_info 모음 ========= */
+.point_blue {color: $point_blue;}
+.point_green {color: $point_green;}
+.point_pink {color: $point_pink;}
+.point_orange {color: $point_orange;}
+
+/* price */
+.price {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  &__discount {
+    padding-right: 4px;
+    @include font_default(11px, 400, $point_blue);
+  }
+  &__txt {
+    padding-right: 4px;
+    @include font_default(16px, 700, $text_primary);
+  }
+  &__date {
+    @include font_default(11px, 400, $text_secondary)
+  }
+}
+
+/* score */
+.score {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  &__box {
+    position: relative;
+    padding-right: 8px;
+    margin-right: 8px;
+    cursor: pointer;
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: -2px;
+      width: 1px;
+      height: 10px;
+      background: $text_secondary;
+      transform: translateY(-50%);
+    }
+    &:last-child::after {
+      display: none;
+    }
+  }
+  &__num {
+    display: inline-block;
+    padding-left: 20px;
+    background: iconImg(star, ffce31) no-repeat left center;
+    background-size: 16px auto;
+    @include font_default(13px, 700, $text_tertiary)
+  }
+  &__cnt-reply {
+    @include font_default(11px, 400, $text_secondary);
+  }
+  &__like {
+    padding-left: 20px;
+    background: iconImg(heart, 424242) no-repeat left center;
+    background-size: 16px auto;
+    @include font_default(12px, 400, $text_tertiary)
+  }
+  &__call {
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: iconImg(phone, 424242) no-repeat center;
+    background-size: 16px auto;
+  }
+  &__msg {
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: iconImg(msg, 424242) no-repeat center;
+    background-size: 16px auto;
+  }
+  &__pin {
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: iconImg(mappin, 424242) no-repeat center;
+    background-size: 16px auto;
+  }
+}
