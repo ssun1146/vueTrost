@@ -51,7 +51,7 @@ export default {
           },
           {
             /** input */
-            name: 'input - ',
+            name: 'input',
             path: '/temp/input',
           },
           {

@@ -1,7 +1,7 @@
 <template>
-  <div class="trost">
+  <div class="trost" style="padding-top:100px; ">
     <nuxt-link :to="menuList[0].path" >
-      <button class="">컴포넌트</button>
+      <button class="component__lst">컴포넌트</button>
     </nuxt-link>
   </div>
 </template>
@@ -27,6 +27,6 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+@import '../../pages/temp/css/components.scss';
 </style>

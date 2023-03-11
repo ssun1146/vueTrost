@@ -1,29 +1,6 @@
 .input{width:100%; }
 
-.g_text-brand{display:flex; justify-content:flex-start; align-items:center; width:100%; margin:24px 0; position:relative; }
-.g_text-brand_input{flex:1 1 auto; width:100%; height:40px; border:0 none; background:#fff; }
-.g_text-brand_label{position:absolute; font-size:14px; font-weight:normal; color:#b1b0af; top:50%; left:0; transform:translateY(-50%); transition:all .3s ease; pointer-events:none; }
-.g_text-brand_border{position:absolute; bottom:.5px; width:100%; height:3px; background:linear-gradient(to right, #ff5477 50%, transparent 50%); background-color:transparent; background-size:200% 100%; background-position:100% 0; transition:all .4s ease;  }
-.g_text-brand_border::before{content:''; display:block; position:absolute; left:0; bottom:0; width:100%; height:1px; background:#dfdfdf; }
-.g_text-brand_desc{position:absolute; bottom:2px; left:0; font-size:12px; font-weight:normal; color:#ff5477; opacity:0; transition:all .2s cubic-bezier(0.550, 0.085, 0.680, 0.530); z-index:0;}
-.g_text-brand_btn{flex:0 0 36px; display:none; top:0; right:0; width:36px; height:40px; font-size:0; text-indent:-9999px; transition:all 0.2s ease; z-index:10; }
-.g_text-brand_btn.btn_close{background:url("https://image.club5678.com/imgs/mobile/new_club/btn/btn_auth_clear.png") no-repeat center; background-size:12px;}
-.g_text-brand_btn.btn_slct{background:url("https://image.club5678.com/imgs/mobile/new_club/ico/ico_bullet_down_b.png") no-repeat center; background-size:7px auto;}
-.g_text-brand_btn.btn_pwd-off{background:url("https://image.club5678.com/imgs/mobile/new_club/ico/ico_view_count_g.png") no-repeat center; background-size:100% auto;}
-.g_text-brand_btn.btn_pwd-on{background:url("https://image.club5678.com/imgs/mobile/new_club/ico/ico_view_count_b.png")no-repeat center; background-size:100% auto;}
-
-.g_text-brand_hidden{position:absolute; top:50%; left:25px; transform:translateY(-50%); width:63px; height:8px; background:url("https://image.club5678.com/imgs/mobile/new_club/ico/ico_input_hidden.png") no-repeat center; background-size:auto 8px; font-size:0; text-indent:-9999px; z-index:8; cursor:text; pointer-events:none; }
-
-.g_text-brand_input:focus ~ .g_text-brand_label{color:#ff5477; }
-.g_text-brand_input:focus ~ .g_text-brand_label,
-.g_text-brand_input:valid ~ .g_text-brand_label{top:-8px; font-size:12px; font-weight:500;}
-.g_text-brand_input:focus ~ .g_text-brand_border{width:100%; height:3px; background-position:0 0 ;}
-.g_text-brand_input:focus{outline:none; border:0 none; }
-
-.g_text-brand_btn.on{display:block; }
-.g_text-brand_desc.on{bottom:-18px; opacity:1; transition:all .3s ease; z-index:1; }
-
-
+/* =========== textField =========== */
 .text_field {
   display: flex;
   justify-content: center;
@@ -38,21 +15,280 @@
     height: 40px;
     border: 0 none;
     background-color: $bg_white;
-
   }
   &__label {
-
+    position: absolute;
+    top: 50%;
+    left: 0;
+    @include font_default(14px, 400, $text_secondary);
+    transform: translateY(-50%);
+    transition: all .3s ease;
+    pointer-events: none;
   }
   &__border {
+    position: absolute;
+    bottom: .5px;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, $border_black 50%, transparent 50%);
+    background-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    transition: all .4s ease;
 
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      background: $border_default;
+    }
   }
   &__desc {
-
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    @include font_default(12px, 400, $text_primary);
+    opacity: 0;
+    transition: all .2s cubic-bezier(.55, .085, .68, .53);
+    z-index: 0;
   }
   &__btn {
-    &-close {}
-    &-slct {}
-    &-pwd_off {}
-    &-pwd_on {}
+    flex: 0 0 36px;
+    display: none;
+    top: 0;
+    right: 0;
+    width: 36px;
+    height: 40px;
+    font-size: 0;
+    text-indent: -9999px;
+    transition: all .2s ease;
+    z-index: 10;
+
+    &-close {
+      background-image: iconImg(closeCir,aeaeae);
+    }
+    &-slct {
+      background-image: iconImg(bulletDown,aeaeae);
+    }
+    &-pwd_off {
+      background-image: iconImg(eyeOff,aeaeae);
+    }
+    &-pwd_on {
+      background-image: iconImg(eyeOn,aeaeae);
+    }
+  }
+  &__input:focus ~ .text_field__label {
+    color: $text_primary;
+  }
+  &__input:focus ~ .text_field__label,
+  &__input:valid ~ .text_field__label {
+    top: 0;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  &__input:focus ~ .text_field__border {
+    width: 100%;
+    height: 3px;
+    background-position: 0 0;
+  }
+  &__input:focus {
+    outline: none;
+    border: 0 none;
+  }
+  &__desc.on {
+    bottom: -10px;
+    opacity: 1;
+    transition: all .3s ease;
+    z-index: 1;
+  }
+}
+
+/* =========== checkbox =========== */
+.check {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 28px;
+  line-height: 28px;
+  margin-bottom: 8px;
+
+  &__input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    &:checked ~ .check__label {
+      background: iconImg(checkOn, 424242) no-repeat left center;
+      background-size: 24px auto;
+      @include font_default(16px, 500, $text_primary)
+    }
+  }
+  &__label {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding-left: 32px;
+    background: iconImg(checkOff,aeaeae)  no-repeat left center;
+    background-size: 24px auto;
+    @include font_default(16px, 400, $text_secondary)
+  }
+}
+
+/* =========== radio =========== */
+.radio {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 28px;
+  line-height: 28px;
+  margin-bottom: 8px;
+
+  &__input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    &:checked ~ .radio__label {
+      background: iconImg(radioOn, 424242) no-repeat left center;
+      background-size: 24px auto;
+      @include font_default(16px, 500, $text_primary);
+    }
+  }
+  &__label {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding-left: 32px;
+    background: iconImg(radioOff,aeaeae)  no-repeat left center;
+    background-size: 24px auto;
+    @include font_default(16px, 400, $text_secondary)
+  }
+}
+
+/* =========== fltrBtn =========== */
+.fltr_btn {
+  display: inline-block;
+  position: relative;
+  margin-right: 8px;
+  &__input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    &:checked ~ .fltr_btn__label {
+      line-height: 36px;
+      padding: 0 17px;
+      border: 0 none;
+      background-color: $btn_primary;
+      @include font_default(13px, 700, $text_white);
+    }
+  }
+  &__label {
+    display: inline-block;
+    height: 36px;
+    line-height: 34px;
+    padding: 0 16px;
+    border: 1px solid $border_default;
+    border-radius: 18px;
+    background-color: $btn_white;
+    @include font_default(13px, 400, $text_primary);
+    box-sizing: border-box;
+  }
+
+  &-point {
+    .fltr_btn__input:checked ~ .fltr_btn__label {
+      line-height: 36px;
+      padding: 0 15px;
+      border: 2px solid $btn_info;
+      border-radius: 8px;
+      background-color: $bg_white;
+      @include font_default(13px, 700, $text_primary);
+    }
+  .fltr_btn__label {
+    line-height: 36px;
+    border: 1px solid $border_default;
+    border-radius: 8px;
+    @include font_default(13px, 400, $text_primary);
+  }
+  }
+}
+
+/* =========== toggleBtn =========== */
+.toggle {
+  position: relative;
+  width: 50px;
+  height: 25px;
+  &__input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+
+    &:checked ~ .toggle__label {
+      background: $btn_info;
+      transition: all .3s ease;
+    }
+    &:checked ~ .toggle__label::before {
+      display: block;
+    }
+    &:checked ~ .toggle__label::after {
+      display: none;
+    }
+    &:checked ~ .toggle__badge {
+      left: 28px;
+      transition: all .3s ease;
+    }
+  }
+  &__label {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 13px;
+    background: $btn_off;
+    transition: all .3s ease;
+    &::before {
+      content: 'on';
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 6px;
+      @include font_default(12px, 700, $text_white);
+      text-transform: uppercase;
+      transform: translateY(-50%);
+    }
+    &::after {
+      content: 'off';
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 24px;
+      @include font_default(12px, 700, $text_white);
+      text-transform: uppercase;
+      transform: translateY(-50%);
+    }
+  }
+  &__badge {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    background-color: $btn_white;
+    box-shadow: 0 0 4px rgba(0,0,0,.2);
+    transition: all .3s ease;
   }
 }

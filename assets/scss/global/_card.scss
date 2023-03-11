@@ -1,1 +1,107 @@
 .card{width:100%; }
+
+/* =========== productCard 타입별로 =========== */
+.basic_card {
+  width: 130px;
+  margin-right: 8px;
+  .card__thumb {
+    position: relative;
+    width: 130px;
+    height: 130px;
+    margin-bottom: 16px;
+    border: 1px solid $border_default;
+    border-radius: 20px;
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+      object-fit: cover;
+    }
+    &_title {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-end;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      line-height: 1.25;
+      padding: 16px 8px;
+      border-radius: 20px;
+      background: rgba(0,0,0,.2);
+      @include font_default(16px, 700, $text_white);
+      box-sizing: border-box;
+    }
+  }
+  .card__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 60px;
+  }
+  .card__txt {
+    @include font_default(13px, 400, $text_tertiary)
+
+  }
+}
+.wide_card {
+  width: 320px;
+  height: 270px;
+  margin-right: 16px;
+  border: 1px solid $border_thin;
+  border-radius: 20px;
+  background: $bg_white;
+  .card__thumb {
+    position: relative;
+    width: 100%;
+    height: 160px;
+    border-radius: 20px 20px 0 0;
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 20px 20px 0 0;
+      object-fit: cover;
+    }
+    &_title {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-end;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 20px 34px;
+      border-radius:20px 20px 0 0;
+      background-color: rgba(0,0,0,.2);
+      @include font_default(24px, 700, $text_white);
+      box-sizing: border-box;
+    }
+  }
+  .card__info {
+    width: 100%;
+    height: 74px;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    background:#ffe9e9;
+  }
+  .card__txt {
+    @include font_default(16px, 700, $text_tertiary);
+  }
+}
+
+.list_card {
+  .card__thumb {
+
+  }
+  .card__info {
+
+  }
+  .card__txt {
+
+  }
+}

@@ -9,7 +9,9 @@ export default {
     name:'ABadge',
     components:{},
     props:{
-      /** vclass */
+      /** vclass
+       * count, count-black, zoom, type_default, type-point, check
+       */
       vClass: {type:String, default:''}
     },
     data(){
