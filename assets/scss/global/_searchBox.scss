@@ -7,6 +7,7 @@
     width: 100%;
     height: 44px;
     line-height: 44px;
+    padding-left: 8px;
     border-bottom: 1px solid $border_thin;
 
   }
@@ -14,8 +15,8 @@
     flex: 0 0 40px;
     width: 40px;
     height: 40px;
-    padding-left: 8px;
-    background: iconImg(search, aeaeae);
+    background: iconImg(search, aeaeae) no-repeat center;
+    background-size: 36px auto;
     box-sizing: border-box;
   }
   &__input {

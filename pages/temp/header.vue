@@ -3,26 +3,26 @@
     <div class="component__box">
       <div class="component__group">
         <h4 class="component__txt">Main Header</h4>
-        <mainHeader :header="header01" />
+        <MMainHeader :header="header01" />
         <div class="component__space"></div>
 
-        <mainHeader :header="header02" />
+        <MMainHeader :header="header02" />
         <div class="component__space"></div>
 
-        <mainHeader />
+        <MMainHeader />
         <div class="component__space"></div>
       </div>
       <div class="component__space"></div>
 
       <div class="component__group">
         <h4 class="component__txt">Sub Header</h4>
-        <subHeader :header="header03" />
+        <MSubHeader :header="header03" />
         <div class="component__space"></div>
 
-        <subHeader :header="header04" />
+        <MSubHeader :header="header04" />
         <div class="component__space"></div>
 
-        <subHeader :header="header05" />
+        <MSubHeader :header="header05" />
         <div class="component__space"></div>
 
       </div>
@@ -31,12 +31,12 @@
 </template>
 
 <script>
-import mainHeader from '~/components/molecules/header/mainHeader.vue';
-import subHeader from '~/components/molecules/header/subHeader.vue';
+import MMainHeader from '~/components/molecules/header/MMainHeader.vue';
+import MSubHeader from '~/components/molecules/header/MSubHeader.vue';
 
 export default {
   name:'',
-  components:{ mainHeader, subHeader },
+  components:{ MMainHeader, MSubHeader },
   props:{},
   data(){
       return{

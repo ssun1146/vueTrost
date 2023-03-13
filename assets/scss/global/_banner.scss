@@ -1,0 +1,32 @@
+.main_banner {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2/1;
+
+  &__img {
+    width: 100%;
+    max-width: 520px;
+    height: 100%;
+    aspect-ratio: 2/1;
+    object-fit: cover;
+  }
+  &__pagination {
+    display: inline-block;
+    width: max-content !important;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 12px;
+    position: absolute;
+    left: auto !important;
+    right: 16px !important;
+    bottom: 8px !important;
+    border-radius: 15px;
+    background: rgba(0,0,0,.4);
+    @include font_default(12px, 500, $text_white, -.1em);
+    z-index: 2;
+    text-align: center;
+  }
+  .list_swipe__wrapper {
+    position: relative;
+  }
+}

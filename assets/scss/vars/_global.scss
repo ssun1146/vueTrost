@@ -6,10 +6,46 @@
 .point_pink {color: $point_pink;}
 .point_orange {color: $point_orange;}
 
+.title {
+  display: inline-block;
+  height: 24px;
+  line-height: 1.25;
+  margin-bottom: 8px;
+  font-size:24px;
+  font-weight: 700;
+}
+.title__arrow {
+  padding-right: 16px;
+  background: iconImg(chevronR, 424242) no-repeat right center;
+  background-size: 24px auto;
+}
+
+.content {
+  font-size: 16px;
+  font-weight: bold;
+  color: $text_primary;
+}
+
+.desc {
+  font-size: 13px;
+  color: $text_secondary;
+}
+
 /* ========== Swipe custom  ========== */
 .list_swipe__wrapper {
   display: flex;
 }
 .list_swipe__slide {
   flex: 0 0 auto;
+}
+
+/* ========== SwiperList ========== */
+.list__title {
+  margin-bottom: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  color: $text_primary;
+}
+.list__swiper {
+  padding-right: 20px;
 }

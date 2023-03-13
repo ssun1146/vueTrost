@@ -1,20 +1,23 @@
 <template>
-  <Trost/>
+  <Nuxt />
 </template>
 
 <script>
-import Trost from '~/components/templates/trost.vue';
+
 
 export default {
   layout:'default',
   name:'indexPage',
-  components:{Trost},
+  components:{  },
   props:{},
   data(){
       return{
       }
   },
   methods:{
+  },
+  created() {
+    this.$router.replace( {path: '/main/'})
   }
 
 }

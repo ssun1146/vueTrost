@@ -1,0 +1,39 @@
+.main_rcmd {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 16px 20px;
+  background: #f2f2f2;
+  box-sizing: border-box;
+  &__box {
+    flex: 0 0 calc(33.3333% - 12px);
+    width: calc(33.3333% - 12px);
+    height: 148px;
+    padding: 12px 10px;
+    margin-right: 16px;
+    border-radius: 16px;
+    box-sizing: border-box;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &-therapy {background: #fff url("@/assets/img/ico_sound.png") no-repeat right bottom; background-size:auto 60px }
+  &-cnslr {background: #fff url("@/assets/img/ico_message.png") no-repeat right bottom; background-size:auto 60px}
+  &-workshop {background: #fff url("@/assets/img/ico_workshop.png") no-repeat right bottom; background-size:auto 60px}
+
+  &__title {
+    line-height: 1.25;
+    @include font_default(18px, 700, $text_primary);
+  }
+  &__badge {
+    display: inline-block;
+    height: 21px;
+    line-height: 21px;
+    padding: 0 12px;
+    border-radius: 12px;
+    background: #E6EEFB;
+    @include font_default(11px, 400, #4C94FC, -.1em);
+    text-align: center;
+  }
+}

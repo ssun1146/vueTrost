@@ -1,0 +1,49 @@
+.main_menu {
+  padding-top: 20px;
+  &__title {
+    width: 100%;
+    margin-bottom: 20px;
+    @include font_default(16px, 700, $text_primary);
+    text-align: center;
+  }
+  &__link_box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  &__link {
+    flex: 0 0 25%;
+    width: 25%;
+    height: 72px;
+    margin-bottom: 10px;
+
+    text-align: center;
+    box-sizing: border-box;
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      padding-top: 48px;
+      box-sizing: border-box;
+    }
+  }
+  &__txt {
+    @include font_default(13px, 400, $text_primary, -.1em);
+  }
+  &-ai {
+    background:url("@/assets/img/ico_mood01.png") no-repeat top 4px center; background-size: 40px auto;
+    .main_menu__txt {@include font_default(13px, 400, #81602F, -.1em)}
+  }
+  &-depress {background:url("@/assets/img/ico_mood02.png") no-repeat top 4px center; background-size: 40px auto;}
+  &-anxiety {background:url("@/assets/img/ico_mood03.png") no-repeat top 4px center; background-size: 40px auto;}
+  &-emotionless {background:url("@/assets/img/ico_mood04.png") no-repeat top 4px center; background-size: 40px auto;}
+  &-stress {background:url("@/assets/img/ico_mood05.png") no-repeat top 4px center; background-size: 40px auto;}
+  &-happy {background:url("@/assets/img/ico_mood06.png") no-repeat top 4px center; background-size: 40px auto;}
+  &-love {background:url("@/assets/img/ico_mood07.png") no-repeat top 4px center; background-size: 40px auto;}
+  &-healing {background:url("@/assets/img/ico_mood08.png") no-repeat top 4px center; background-size: 40px auto;}
+  &-selfconscious {background:url("@/assets/img/ico_mood09.png") no-repeat top 4px center; background-size: 40px auto;}
+  &-friendship {background:url("@/assets/img/ico_mood10.png") no-repeat top 4px center; background-size: 40px auto;}
+  &-work {background:url("@/assets/img/ico_mood11.png") no-repeat top 4px center; background-size: 40px auto;}
+  &-family {background:url("@/assets/img/ico_mood12.png") no-repeat top 4px center; background-size: 40px auto;}
+}

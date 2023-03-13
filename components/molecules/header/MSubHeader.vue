@@ -16,26 +16,26 @@
       <AIconBtn
         class="sub_header__btn"
         :vclass="'close'"
-        v-if="header.subBtn === 'close'"
+        v-if="header.isClose === true"
       ></AIconBtn>
       <AIconBtn
         class="sub_header__btn"
         :vclass="'storage'"
-        v-if="header.subBtn === 'storage'"
+        v-if="header.isStorage === true"
       ></AIconBtn>
       <AIconBtn
         class="sub_header__btn"
         :vclass="'cart'"
-        v-if="header.subBtn === 'cart'"
+        v-if="header.isCart === true"
       ></AIconBtn>
       <AIconBtn
         class="sub_header__btn"
         :vclass="'search'"
-        v-if="header.subBtn === 'search'"
+        v-if="header.isSearch === true"
       ></AIconBtn>
       <button
         class="sub_header__btn-done"
-        v-if="header.subBtn === 'done'"
+        v-if="header.isDone === true"
       >완료</button>
     </div>
   </header>
@@ -45,6 +45,7 @@
 import AIconBtn from '~/components/atoms/aiconbtn.vue';
 
 export default {
+  name: 'MSubHeader',
   components:{ AIconBtn },
   props:{
     /** subHeader 옵션 */

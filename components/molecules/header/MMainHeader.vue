@@ -7,22 +7,24 @@
       <AIconBtn
         class="main_header__btn"
         :vclass="'search'"
-        v-if="header.btn === 'search'"
+        v-if="isBtnSearch === true"
       ></AIconBtn>
       <AIconBtn
         class="main_header__btn"
         :vclass="'setting'"
-        v-if="header.btn === 'setting'"
+        v-if="isBtnSetting === true"
       ></AIconBtn>
       <AIconBtn
         class="main_header__btn"
         :vclass="'alarm'"
+        v-if="isBtnAlarm === true"
       >
         <ABadge class="main_header__badge" :vClass="'badge__count'"><slot>12</slot></ABadge>
       </AIconBtn>
       <AIconBtn
         class="main_header__btn"
         :vclass="'cart'"
+        v-if="isBtnCart === true"
       >
         <ABadge class="main_header__badge" :vClass="'badge__count'"><slot>12</slot></ABadge>
       </AIconBtn>
@@ -35,7 +37,7 @@ import ABadge from '~/components/atoms/abadge.vue';
 import AIconBtn from '~/components/atoms/aiconbtn.vue';
 
 export default {
-  name:'mainHeader',
+  name:'MMainHeader',
   components:{ ABadge, AIconBtn },
   props:{
     /** 메인헤더 첫번째 버튼 :: '', search, setting */
@@ -49,6 +51,10 @@ export default {
   },
   data(){
       return{
+        isBtnSearch:true,
+        isBtnSetting:false,
+        isBtnAlarm:true,
+        isBtnCart:true,
       }
   },
   methods:{
