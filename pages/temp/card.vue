@@ -3,9 +3,24 @@
     <div class="component__box">
       <div class="component__group">
         <h4 class="component__txt">Product Card</h4>
-        <MProductCard :productCard="productCard01">
-          <div slot="thumbTitle">호호</div>
-        </MProductCard>
+        <swiper :options="swiperOption">
+          <swiper-slide>
+            <MProductCard :productCard="productCard01">
+              <div slot="thumbTitle">호호</div>
+            </MProductCard>
+          </swiper-slide>
+          <swiper-slide>
+            <MProductCard :productCard="productCard01">
+              <div slot="thumbTitle">호호</div>
+            </MProductCard>
+          </swiper-slide>
+          <swiper-slide>
+            <MProductCard :productCard="productCard01">
+              <div slot="thumbTitle">호호</div>
+            </MProductCard>
+          </swiper-slide>
+        </swiper>
+
         <div class="component__space"></div>
 
         <MProductCard :productCard="productCard02">
@@ -71,6 +86,12 @@ export default {
         productCard04: {
           type: 'cart',
           txt: '스티커세트 ( 감정스티커 + 질문스티커 )'
+        },
+
+        swiperOption: {
+          wrapperClass:'list_swipe__wrapper',
+					slideClass:'list_swipe__slide',
+          slidesPerView: 'auto'
         }
 
       }

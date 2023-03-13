@@ -22,10 +22,12 @@ export default {
     scss: [
       './assets/scss/vars/*.scss',
       './assets/scss/global/*.scss',
+      './assets/lib/css/*.css',
       ]
   },
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    {src: '@/plugins/vue-awesome-swiper', mode: 'client'},
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

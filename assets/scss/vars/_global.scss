@@ -1,2 +1,15 @@
 /* common/_variables.scss */
 // @charset "utf-8";
+/* ========== text Option ========== */
+.point_blue {color: $point_blue;}
+.point_green {color: $point_green;}
+.point_pink {color: $point_pink;}
+.point_orange {color: $point_orange;}
+
+/* ========== Swipe custom  ========== */
+.list_swipe__wrapper {
+  display: flex;
+}
+.list_swipe__slide {
+  flex: 0 0 auto;
+}
