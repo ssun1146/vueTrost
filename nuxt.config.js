@@ -1,3 +1,4 @@
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -37,6 +38,13 @@ export default {
   buildModules: [
     '@nuxtjs/style-resources',
   ],
+  serverMiddleware: [
+    '~api/index.js'
+  ],
+
+  axios: {
+    baseURL: 'http://localhost:3000'
+  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
