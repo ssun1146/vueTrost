@@ -1,5 +1,8 @@
 <template>
-  <button :class="classType">
+  <button
+    :class="classType"
+    @click="onButton($event)"
+  >
     <slot></slot>
   </button>
 </template>
@@ -32,6 +35,9 @@ export default {
       }
   },
   methods:{
+      onButton(event){
+        this.$emit('click', event)
+      }
   },
   computed: {
     classType() {

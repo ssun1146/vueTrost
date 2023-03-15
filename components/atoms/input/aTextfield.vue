@@ -5,7 +5,13 @@
       type="text" class="text_field__input"
       required=""
       v-model="inputTxt"
+      @change="onChange"
+      @input="onInput"
+      @keydown="onKeyDown"
+      @keypress="onKeyPress"
+      @click="onClick"
     >
+    <!-- @click:append="show = !show" -->
     <label
       class="text_field__label"
       v-if="textField.label"
@@ -44,11 +50,26 @@ export default {
   },
   data(){
       return{
-        inputTxt: ''
+        inputTxt: '',
+        show:false,
       }
   },
   methods:{
-
+    onInput(event) {
+			this.$emit('input', event);
+		},
+		onChange(event) {
+			this.$emit('change', event);
+		},
+		onKeyDown(event) {
+			this.$emit('keydown', event);
+		},
+		onKeyPress(event) {
+			this.$emit('keypress', event);
+		},
+		onClick(event) {
+			this.$emit('click', event);
+		},
   }
 }
 </script>

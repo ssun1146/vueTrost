@@ -1,6 +1,6 @@
 <template>
   <header class="main_header">
-    <nuxt-link to="/index">
+    <nuxt-link to="/main/">
       <img src="@/assets/img/logo_trost.png" class="main_header__logo" />
     </nuxt-link>
     <div class="main_header__box">

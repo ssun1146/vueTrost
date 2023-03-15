@@ -1,6 +1,6 @@
 <template>
   <div class="radio">
-    <input type="radio" class="radio__input" />
+    <input type="radio" class="radio__input" @click="onRadio(r)" />
     <label class="radio__label">{{ radio.label }}</label>
   </div>
 </template>
@@ -22,6 +22,9 @@ export default {
     }
   },
   methods:{
+    onRadio(event) {
+			this.$emit('click', event);
+		},
   }
 }
 </script>

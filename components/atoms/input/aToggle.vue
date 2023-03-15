@@ -1,6 +1,6 @@
 <template>
   <div class="toggle">
-    <input type="checkbox" class="toggle__input" />
+    <input type="checkbox" class="toggle__input" @change="onChange($event)" />
     <label class="toggle__label"></label>
     <span class="toggle__badge"></span>
   </div>
@@ -16,10 +16,9 @@ export default {
       }
   },
   methods:{
+    onChange(event) {
+			this.$emit('change', event);
+		},
   }
 }
 </script>
-
-<style>
-
-</style>

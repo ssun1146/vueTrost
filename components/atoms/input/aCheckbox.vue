@@ -1,6 +1,6 @@
 <template>
   <div class="check">
-    <input type="checkbox" class="check__input" />
+    <input type="checkbox" class="check__input" @change="onChange($event)" />
     <label class="check__label">{{ checkbox.label }}</label>
   </div>
 </template>
@@ -19,6 +19,10 @@ export default {
   },
   data(){
     return{
+      onChange(event) {
+        this.$emit('input', event);
+        this.$emit('change', event);
+      },
     }
   },
   methods:{

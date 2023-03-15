@@ -1,0 +1,30 @@
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  max-width: 520px;
+  height: 100vh;
+  padding: 100px 20px;
+  box-sizing: border-box;
+  &__logo {
+    width: 140px;
+    height: auto;
+    margin-bottom: 40px;
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+  &__input {
+    width: 100%;
+    padding: 0 20px;
+    margin-bottom: 80px;
+    box-sizing: border-box;
+  }
+  &__btn {
+    width: 100%;
+  }
+}
