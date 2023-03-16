@@ -1,16 +1,22 @@
-import express from 'express';
-const app = express();
+const express = require('express')
+const app = express()
+const port = 3000
+const mongoose = require('mongoose');
 
-const bodyParser = require('body-parser');
+mongoose.connect(process.env.MONGO_Trost);
 
-app.post('/', (req, res) => {
-  console.log('/api/');
-  res.send('API test');
+app.get('/', (req, res) => {
+  res.send('Hello World!')
 })
 
-module.exports = {
-  path: '/api',
-  handler: app
-}
+var db = mongoose.connection;
+db.once('open', function(){
+  console.log('연결')
+})
+db.on('error', function(err) {
+  console.log('DBerror:', err);
+})
 
-app.use(bodyParser.json())
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
