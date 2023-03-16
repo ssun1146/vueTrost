@@ -5,6 +5,9 @@
   overflow-x: hidden;
   overflow-y: auto;
 }
+.pc__header_fix {
+  padding-top: 50px;
+}
 button.component__lst.temp{position:fixed; left:20px; top:60px; width:100px; text-align:center; z-index:9999; }
 a.component__link.temp{position:fixed; left:140px; top:60px; width:100px; text-align:center; z-index:9999; }
 @media (min-width:520px) {
